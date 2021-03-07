@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="style.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HADJADJI Mohamed </title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://kit.fontawesome.com/b99e675b6e.js"></script> 	
+
+  </head>
+<body>
+    <div class="topnav" id="myTopnav">
+        <a href="#home" class="active" id="home">Home</a>
+        <a href="#projects" id="projects">Projects</a>
+        <a href="#contact" id="contact">Contact</a>
+        <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+          <i class="fa fa-bars"></i>
+        </a>
+      </div>
+      
+      <div class="container">
+     
+    <div class="whoiam">
+        <img src="img.jpg"  class="profil-pic" alt="">
+        <div class="text">
+
+            <h2> Hadjadji Mohamed Bachir</h2>
+            <p>
+          &nbsp; Hello my name is Hadjadji Mohamed Bachir  I'm a full stack developper.
+
+         <h3> Skills:</h3>
+        <ul>
+            <li>Programming languages :
+                <ul>
+                 <br>   <li> C , Java , Javascript , Python , Go language , Php , Mysql ...      </li> <br>
+                </ul>
+                
+            </li>
+
+            <li>Frameworks : </li>
+            <ul>
+           
+        <br> <li>  Flutter ,React-native , VueJS , Jquery , Bootstrap ,Django , Laravel ...  </li> <br>
+            </ul>
+       
+        </ul>
+         
+            </p>
+
+
+        </div>
+    
+    </div>    
+    
+    <div class="projects">
+      <div>      <h1>My projects: </h1>
+      <ol class="pr">
+        <li><div><a href="https://github.com/Mohamedbachir120/Calculator-js" target="_blank">Calculator with advanced algorithme for priority decision</a></div><img src="calcul.png" alt=""></li> 
+        <li><div><a href="https://github.com/Mohamedbachir120/Epaulux" target="_blank">E-commerce Web App</a></div><img src="e-commerce.png" alt=""> </li>
+         <li><div><a href="https://mohamedbachir120.github.io/Sudoku/" target="_blank">Sudoku</a></div><img src="sudoku.png" alt=""></li> 
+         <li><div><a href="https://github.com/Mohamedbachir120/File_manager" target="_blank">File manager</a></div> <img src="file.png" alt=""></li>
+         <li><div><a href="http://mohamedbachir.pythonanywhere.com/" target="_blank">Web application for the management of a doctoral student’s course</a></div> <img src="doc.png" alt=""></li>
+        <li><div><a href="https://github.com/Mohamedbachir120/Auth-system">Authentication System</a></div> <img src="auth.png" alt=""></li>
+        <li><div><a href="https://github.com/Mohamedbachir120/Game-Rating">Native app for Game Rating</a> </div> <img src="game.png" alt=""></li>
+        <li>
+          <div><a href="https://koudami.com">koudami web app </a> </div>
+          <img src="logo.png" alt="">
+        </li>
+        <li>
+          <div><a href="https://3xahjsdb44dqg6afzbifya-on.drv.tw/EMD/html/">Python courses</a></div>
+          <img src="python.png" alt="">
+        </li>
+      </ol>
+    </div>
+
+
+
+    
+    
+
+    </div>
+
+    <div class="contact"> 
+
+      <h1>Contact </h1>
+
+    <ul>
+
+      <li><a href="https://www.linkedin.com/in/mohamed-bachir-hadjadji-89a5201ba/" target="_blank"><i class="fab fa-linkedin"></i> &nbsp; Linkedin : Mohamed Bachir HADJADJI</a>  </li>
+      <li><a href="https://github.com/Mohamedbachir120" target="_blank"><i class="fab fa-github"></i> &nbsp;  Github  : Mohamedbachir120 </a></li>
+      <li><a href="mailto:mohamedbhadjiadji@gmail.com"><i class="fas fa-envelope-square"></i>&nbsp; Email : mohamedbhadjiadji@gmail.com </a>  </li>  
+      <li><i class="fas fa-phone-square-alt"></i> &nbsp;Phone Number : +213696930704</li>
+    </ul>
+
+    </div>
+
+
+
+    </div>
+
+</body>
+</html>
+<script>
+
+var  current=".whoiam";
+
+var current_parent="#home";
+
+  $('.text').fadeIn(2000);
+function myFunction() {
+    var x = document.getElementById("myTopnav");
+    if (x.className === "topnav") {
+      x.className += " responsive";
+    } else {
+      x.className = "topnav";
+    }
+  }
+
+
+  $('#projects').click(function(e){
+
+    if(current!='.projects'){
+
+  $(current_parent).removeClass("active");
+e.preventDefault();
+$(current).fadeOut(1000);
+$(".projects").fadeIn(1000);
+$(".projects").css({"display":"flex","flex-direction":"row"});
+current=".projects";
+current_parent="#projects";
+
+$(current_parent).addClass("active");
+
+
+
+
+}
+}
+  
+  );
+  
+  $('#home').click(function(e){
+   
+
+    if(current!=".whoiam"){
+      $(current_parent).removeClass("active");
+
+    e.preventDefault();
+    $(current).fadeOut(1000);
+$(".whoiam").fadeIn(1000);
+
+current=".whoiam";
+current_parent="#home";
+
+$(current_parent).addClass("active");
+
+
+}
+
+
+  });
+
+  $('#contact').click(function(e){
+   
+
+   if(current!=".contact"){
+     $(current_parent).removeClass("active");
+
+   e.preventDefault();
+   $(current).fadeOut(1000);
+$(".contact").fadeIn(1000);
+
+current=".contact";
+current_parent="#contact";
+
+$(current_parent).addClass("active");
+
+
+}
+
+
+ });
+
+
+
+
+
+
+
+
+</script>
